@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VisualizatorSet2" targetNamespace="http://tempuri.org/VisualizatorSet2.xsd" xmlns:mstns="http://tempuri.org/VisualizatorSet2.xsd" xmlns="http://tempuri.org/VisualizatorSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.DB_Tech_lab.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_visualizorTableAdapter" GeneratorDataComponentClassName="view_visualizorTableAdapter" Name="view_visualizor" UserDataComponentName="view_visualizorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "Місто", "Назва_параметру", "Час", "Результат_вимірювання" FROM "public"."view_visualizor"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Місто" DataSetColumn="Місто" />
+              <Mapping SourceColumn="Назва_параметру" DataSetColumn="Назва_параметру" />
+              <Mapping SourceColumn="Час" DataSetColumn="Час" />
+              <Mapping SourceColumn="Результат_вимірювання" DataSetColumn="Результат_вимірювання" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VisualizatorSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="VisualizatorSet2" msprop:Generator_DataSetName="VisualizatorSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_visualizor" msprop:Generator_RowEvHandlerName="view_visualizorRowChangeEventHandler" msprop:Generator_RowDeletedName="view_visualizorRowDeleted" msprop:Generator_RowDeletingName="view_visualizorRowDeleting" msprop:Generator_RowEvArgName="view_visualizorRowChangeEvent" msprop:Generator_TablePropName="view_visualizor" msprop:Generator_RowChangedName="view_visualizorRowChanged" msprop:Generator_RowChangingName="view_visualizorRowChanging" msprop:Generator_TableClassName="view_visualizorDataTable" msprop:Generator_RowClassName="view_visualizorRow" msprop:Generator_TableVarName="tableview_visualizor" msprop:Generator_UserTableName="view_visualizor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Місто" msprop:Generator_ColumnPropNameInRow="Місто" msprop:Generator_ColumnPropNameInTable="МістоColumn" msprop:Generator_ColumnVarNameInTable="columnМісто" msprop:Generator_UserColumnName="Місто" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Назва_параметру" msprop:Generator_ColumnPropNameInRow="Назва_параметру" msprop:Generator_ColumnPropNameInTable="Назва_параметруColumn" msprop:Generator_ColumnVarNameInTable="columnНазва_параметру" msprop:Generator_UserColumnName="Назва_параметру" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Час" msprop:Generator_ColumnPropNameInRow="Час" msprop:Generator_ColumnPropNameInTable="ЧасColumn" msprop:Generator_ColumnVarNameInTable="columnЧас" msprop:Generator_UserColumnName="Час" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Результат_вимірювання" msprop:Generator_ColumnPropNameInRow="Результат_вимірювання" msprop:Generator_ColumnPropNameInTable="Результат_вимірюванняColumn" msprop:Generator_ColumnVarNameInTable="columnРезультат_вимірювання" msprop:Generator_UserColumnName="Результат_вимірювання" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

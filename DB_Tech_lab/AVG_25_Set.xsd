@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AVG_25_Set" targetNamespace="http://tempuri.org/AVG_25_Set.xsd" xmlns:mstns="http://tempuri.org/AVG_25_Set.xsd" xmlns="http://tempuri.org/AVG_25_Set.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.DB_Tech_lab.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_avg_25TableAdapter" GeneratorDataComponentClassName="view_avg_25TableAdapter" Name="view_avg_25" UserDataComponentName="view_avg_25TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "Середній_результат_в_день", "Дата", "Назва_параметру", "Степіть_чистоти_повітря", "Назва_станції" FROM "public"."view_avg_25"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Середній_результат_в_день" DataSetColumn="Середній_результат_в_день" />
+              <Mapping SourceColumn="Дата" DataSetColumn="Дата" />
+              <Mapping SourceColumn="Назва_параметру" DataSetColumn="Назва_параметру" />
+              <Mapping SourceColumn="Степіть_чистоти_повітря" DataSetColumn="Степіть_чистоти_повітря" />
+              <Mapping SourceColumn="Назва_станції" DataSetColumn="Назва_станції" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AVG_25_Set" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="AVG_25_Set" msprop:Generator_DataSetName="AVG_25_Set">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_avg_25" msprop:Generator_RowEvHandlerName="view_avg_25RowChangeEventHandler" msprop:Generator_RowDeletedName="view_avg_25RowDeleted" msprop:Generator_RowDeletingName="view_avg_25RowDeleting" msprop:Generator_RowEvArgName="view_avg_25RowChangeEvent" msprop:Generator_TablePropName="view_avg_25" msprop:Generator_RowChangedName="view_avg_25RowChanged" msprop:Generator_RowChangingName="view_avg_25RowChanging" msprop:Generator_TableClassName="view_avg_25DataTable" msprop:Generator_RowClassName="view_avg_25Row" msprop:Generator_TableVarName="tableview_avg_25" msprop:Generator_UserTableName="view_avg_25">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Середній_результат_в_день" msprop:Generator_ColumnPropNameInRow="Середній_результат_в_день" msprop:Generator_ColumnPropNameInTable="Середній_результат_в_деньColumn" msprop:Generator_ColumnVarNameInTable="columnСередній_результат_в_день" msprop:Generator_UserColumnName="Середній_результат_в_день" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Дата" msprop:Generator_ColumnPropNameInRow="Дата" msprop:Generator_ColumnPropNameInTable="ДатаColumn" msprop:Generator_ColumnVarNameInTable="columnДата" msprop:Generator_UserColumnName="Дата" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Назва_параметру" msprop:Generator_ColumnPropNameInRow="Назва_параметру" msprop:Generator_ColumnPropNameInTable="Назва_параметруColumn" msprop:Generator_ColumnVarNameInTable="columnНазва_параметру" msprop:Generator_UserColumnName="Назва_параметру" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Степіть_чистоти_повітря" msprop:Generator_ColumnPropNameInRow="Степіть_чистоти_повітря" msprop:Generator_ColumnPropNameInTable="Степіть_чистоти_повітряColumn" msprop:Generator_ColumnVarNameInTable="columnСтепіть_чистоти_повітря" msprop:Generator_UserColumnName="Степіть_чистоти_повітря" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Назва_станції" msprop:Generator_ColumnPropNameInRow="Назва_станції" msprop:Generator_ColumnPropNameInTable="Назва_станціїColumn" msprop:Generator_ColumnVarNameInTable="columnНазва_станції" msprop:Generator_UserColumnName="Назва_станції" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.DB_Tech_lab.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="station_viewTableAdapter" GeneratorDataComponentClassName="station_viewTableAdapter" Name="station_view" UserDataComponentName="station_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "Назва_станції", "Час", "Назва_параметру", "Одиниця_вимірювання" FROM "public"."station_view"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Назва_станції" DataSetColumn="Назва_станції" />
+              <Mapping SourceColumn="Час" DataSetColumn="Час" />
+              <Mapping SourceColumn="Назва_параметру" DataSetColumn="Назва_параметру" />
+              <Mapping SourceColumn="Одиниця_вимірювання" DataSetColumn="Одиниця_вимірювання" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="station_view" msprop:Generator_RowEvHandlerName="station_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="station_viewRowDeleted" msprop:Generator_RowDeletingName="station_viewRowDeleting" msprop:Generator_RowEvArgName="station_viewRowChangeEvent" msprop:Generator_TablePropName="station_view" msprop:Generator_RowChangedName="station_viewRowChanged" msprop:Generator_RowChangingName="station_viewRowChanging" msprop:Generator_TableClassName="station_viewDataTable" msprop:Generator_RowClassName="station_viewRow" msprop:Generator_TableVarName="tablestation_view" msprop:Generator_UserTableName="station_view">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Назва_станції" msprop:Generator_ColumnPropNameInRow="Назва_станції" msprop:Generator_ColumnPropNameInTable="Назва_станціїColumn" msprop:Generator_ColumnVarNameInTable="columnНазва_станції" msprop:Generator_UserColumnName="Назва_станції" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Час" msprop:Generator_ColumnPropNameInRow="Час" msprop:Generator_ColumnPropNameInTable="ЧасColumn" msprop:Generator_ColumnVarNameInTable="columnЧас" msprop:Generator_UserColumnName="Час" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Назва_параметру" msprop:Generator_ColumnPropNameInRow="Назва_параметру" msprop:Generator_ColumnPropNameInTable="Назва_параметруColumn" msprop:Generator_ColumnVarNameInTable="columnНазва_параметру" msprop:Generator_UserColumnName="Назва_параметру" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Одиниця_вимірювання" msprop:Generator_ColumnPropNameInRow="Одиниця_вимірювання" msprop:Generator_ColumnPropNameInTable="Одиниця_вимірюванняColumn" msprop:Generator_ColumnVarNameInTable="columnОдиниця_вимірювання" msprop:Generator_UserColumnName="Одиниця_вимірювання" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
