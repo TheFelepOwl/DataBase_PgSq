@@ -42,23 +42,20 @@ namespace DB_Tech_lab
         }
 
 
-        private void Connect_db(string query)
+        
+
+
+        private async Task Connect_dbAsync(string query)
         {
-
-
             NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, connection);
 
-            ///OdbcDataAdapter adapter = new OdbcDataAdapter(query, connection);
-
-
             System.Data.DataTable table = new System.Data.DataTable();
-            adapter.Fill(table);
+            await Task.Run(() => adapter.Fill(table));
             dataGridView1.DataSource = table;
-
-
 
             connection.Close();
         }
+
 
         private void Station_view()
         {
@@ -122,84 +119,117 @@ namespace DB_Tech_lab
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
+
+        }
+
+        private async void станціїToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+            string query = "SELECT city, s.name AS station_name, s.status AS station_status, ms.URL " +
+                   "FROM Station s " +
+                   "INNER JOIN MQTT_Server ms ON s.Server_ID = ms.ID_MQTT_Server";
+            await Connect_dbAsync(query);
+            Station_view();
+
+            
+
+        }
+
+        private async void категоріїToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+            string query = "SELECT Designation FROM Category";
+            await Connect_dbAsync(query);
+            Category_view();
+            
+        }
+
+        private async void mQTTServerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+            string query = "SELECT URL, Status FROM MQTT_Server";
+            await Connect_dbAsync(query);
+            mQTTServer_view();
+            
+        }
+
+        private async void кординатиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+            string query = "SELECT s.name AS station_name, longitude FROM Coordinates c " +
+                          "INNER JOIN Station s ON c.station_ID = s.ID_station";
+
+            await Connect_dbAsync(query);
+
+            Coordinates_view();
+            
+        }
+
+        private async void вимірюванняToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Loadscreen loadscreen = new Loadscreen();
+            loadscreen.Show();
+
+            string query = "SELECT mu.Title AS measurement_unit_Title, measurement_time, value_, s.name AS station_name " +
+                           "FROM Measurment m " +
+                           "INNER JOIN Station s ON m.station_ID = s.ID_station " +
+                           "INNER JOIN Measurment_Unit mu ON m.measurement_unit_ID = mu.ID_Measurment_Unit";
+
+            await Connect_dbAsync(query);
+
+            Measurment_view();
+
+            loadscreen.Close();
 
             
         }
 
-        private void станціїToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private async void оптималніЗначенняToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string query = "SELECT city, s.name AS station_name, s.status AS station_status, ms.URL " +
-                   "FROM Station s " +
-                   "INNER JOIN MQTT_Server ms ON s.Server_ID = ms.ID_MQTT_Server";
-            Connect_db(query);
+            
 
-            Station_view();
-        }
-
-        private void категоріїToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string query = "SELECT Designation FROM Category";
-            Connect_db(query);
-            Category_view();
-        }
-
-        private void mQTTServerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string query = "SELECT URL, Status FROM MQTT_Server";
-            Connect_db(query);
-            mQTTServer_view();
-        }
-
-        private void кординатиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string query = "SELECT s.name AS station_name, longitude FROM Coordinates c " +
-                          "INNER JOIN Station s ON c.station_ID = s.ID_station";
-
-            Connect_db(query);
-
-            Coordinates_view();
-        }
-
-        private void вимірюванняToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string query = "SELECT mu.Title AS measurement_unit_Title, measurement_time, value_, s.name AS station_name " +
-                   "FROM Measurment m " +
-                   "INNER JOIN Station s ON m.station_ID = s.ID_station " +
-                   "INNER JOIN Measurment_Unit mu ON m.measurement_unit_ID = mu.ID_Measurment_Unit";
-            Connect_db(query);
-            Measurment_view();
-        }
-
-        private void оптималніЗначенняToolStripMenuItem_Click(object sender, EventArgs e)
-        {
             string query = "SELECT c.Designation, mu.Title AS measurement_unit_Title, o.lower_limit, o.upper_limit " +
                  "FROM Optimal_Value o " +
                  "INNER JOIN Category c ON o.category_ID = c.ID_Category " +
                  "INNER JOIN Measurment_Unit mu ON o.measurement_unit_ID = mu.ID_Measurment_Unit";
-            Connect_db(query);
+            await Connect_dbAsync(query);
             Optimal_view();
+            
         }
 
-        private void улюбленнаСтанціяToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void улюбленнаСтанціяToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+
             string query = "SELECT username, s.name AS station_name FROM Favorite_Station fs " +
                           "INNER JOIN Station s ON fs.station_ID = s.ID_station";
-            Connect_db(query);
+            await Connect_dbAsync(query);
             FavoriteStation_view();
+            
         }
 
-        private void mQTTMessegeUnitToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void mQTTMessegeUnitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            
+
             string query = "SELECT s.name AS station_name, mu.Title, mmu.Message_, mmu.Oreder " +
                    "FROM MQTT_Message_Unit mmu " +
                    "INNER JOIN Station s ON mmu.station_ID = s.ID_station " +
                    "INNER JOIN Measurment_Unit mu ON mmu.measurement_unit_ID = mu.ID_Measurment_Unit";
-            Connect_db(query);
+            await Connect_dbAsync(query);
             MQTTMessageUnit_view();
+            
         }
 
         private void списокПідключенихСтанційToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {   
             Form3 form3 = new Form3();
             form3.Show();
         }

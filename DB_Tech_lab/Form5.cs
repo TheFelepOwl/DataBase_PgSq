@@ -46,9 +46,14 @@ namespace DB_Tech_lab
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   
+            Loadscreen loadscreen = new Loadscreen();
+            loadscreen.Show();
+
             GenerateAndDisplayReport();
             Python_grafix();
+
+            loadscreen.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

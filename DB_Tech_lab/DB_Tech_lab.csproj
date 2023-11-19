@@ -236,6 +236,12 @@
     <Compile Include="Form8.Designer.cs">
       <DependentUpon>Form8.cs</DependentUpon>
     </Compile>
+    <Compile Include="Loadscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loadscreen.Designer.cs">
+      <DependentUpon>Loadscreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form8.resx">
       <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loadscreen.resx">
+      <DependentUpon>Loadscreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PowerBi.resx">
       <DependentUpon>PowerBi.cs</DependentUpon>
