@@ -56,15 +56,15 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.66448cm</Width>
+                  <Width>5.22585cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>4.06137cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>1.62719cm</Height>
+                  <Height>1.86673cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -129,7 +129,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>0.83954cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -194,7 +194,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>0.83954cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -264,7 +264,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.62719cm</Size>
+                    <Size>1.86673cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox2">
                         <CanGrow>true</CanGrow>
@@ -297,7 +297,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.62719cm</Size>
+                    <Size>1.86673cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox5">
                         <CanGrow>true</CanGrow>
@@ -363,10 +363,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>COSet1</DataSetName>
-            <Top>1.13453cm</Top>
-            <Left>2.03412cm</Left>
-            <Height>4.45438cm</Height>
-            <Width>6.16448cm</Width>
+            <Top>1.44639cm</Top>
+            <Left>1.15817cm</Left>
+            <Height>5.41252cm</Height>
+            <Width>9.28722cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -392,11 +392,15 @@
                   <TextRuns>
                     <TextRun>
                       <Value>Категорії оптимальних значень та кількість вимірювань середньодобових значень чадного газу (CO), що відповідають катигоріям на стагції </Value>
-                      <Style />
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                      </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Parameters!station.Value</Value>
-                      <Style />
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />

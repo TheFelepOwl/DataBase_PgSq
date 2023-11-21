@@ -32,12 +32,19 @@ namespace DB_Tech_lab
             InitializeComponent();
             connection = DataBase.GetConnection(username, password);
 
+            
+
             ///connection = DataBase_ODBC.GetConnection(username, password);
 
 
             this.form2 = form2;
             this.username = username; 
             this.password = password;
+
+            if (this.username == "city")
+            {
+                City();
+            }
 
         }
 
@@ -56,13 +63,24 @@ namespace DB_Tech_lab
             connection.Close();
         }
 
-
+        private void City()
+        {
+            станціїToolStripMenuItem.Visible = false;
+            категоріїToolStripMenuItem.Visible = false;
+            mQTTServerToolStripMenuItem.Visible = false;
+            
+            оптималніЗначенняToolStripMenuItem.Visible = false;
+            улюбленнаСтанціяToolStripMenuItem.Visible = false;
+            mQTTMessegeUnitToolStripMenuItem.Visible = false;
+            списокПідключенихСтанційToolStripMenuItem.Visible = false;
+        }
         private void Station_view()
         {
             dataGridView1.Columns["city"].HeaderText = "Місто";
             dataGridView1.Columns["station_name"].HeaderText = "Назва станції";
             dataGridView1.Columns["station_status"].HeaderText = "Статус станції";
             dataGridView1.Columns["URL"].HeaderText = "URL";
+            dataGridView1.Columns["longitude"].HeaderText = "Довгота і Широта";
         }
 
         private void Category_view()
@@ -125,11 +143,13 @@ namespace DB_Tech_lab
 
         private async void станціїToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
 
-            string query = "SELECT city, s.name AS station_name, s.status AS station_status, ms.URL " +
+
+            string query = "SELECT city, s.name AS station_name, s.status AS station_status, ms.URL, longitude " +
                    "FROM Station s " +
-                   "INNER JOIN MQTT_Server ms ON s.Server_ID = ms.ID_MQTT_Server";
+                   "INNER JOIN MQTT_Server ms ON s.Server_ID = ms.ID_MQTT_Server " +
+                   "INNER JOIN Coordinates c ON s.ID_station = c.station_ID";
+
             await Connect_dbAsync(query);
             Station_view();
 
@@ -157,18 +177,7 @@ namespace DB_Tech_lab
             
         }
 
-        private async void кординатиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-
-            string query = "SELECT s.name AS station_name, longitude FROM Coordinates c " +
-                          "INNER JOIN Station s ON c.station_ID = s.ID_station";
-
-            await Connect_dbAsync(query);
-
-            Coordinates_view();
-            
-        }
+        
 
         private async void вимірюванняToolStripMenuItem_Click(object sender, EventArgs e)
         {

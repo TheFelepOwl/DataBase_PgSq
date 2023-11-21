@@ -27,11 +27,7 @@ namespace DB_Tech_lab
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "visualizatorSet.visualizor". При необходимости она может быть перемещена или удалена.
             this.visualizorTableAdapter.Fill(this.visualizatorSet.visualizor);
-
-
-
 
         }
 
@@ -47,13 +43,12 @@ namespace DB_Tech_lab
 
         private void button1_Click(object sender, EventArgs e)
         {   
-            Loadscreen loadscreen = new Loadscreen();
-            loadscreen.Show();
+            
 
             GenerateAndDisplayReport();
             Python_grafix();
 
-            loadscreen.Close();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -73,14 +68,13 @@ namespace DB_Tech_lab
             {
                 process.Start();
 
-                // Получение вывода стандартного потока ошибок
                 string errorOutput = process.StandardError.ReadToEnd();
                 process.WaitForExit();
 
-                // Вывод в консоль C#
+              
                 Console.WriteLine(errorOutput);
 
-                // Проверка кода завершения процесса
+            
                 if (process.ExitCode != 0)
                 {
                     Console.WriteLine($"Error: {process.ExitCode}");
@@ -116,7 +110,7 @@ namespace DB_Tech_lab
             
 
             reportViewer1.LocalReport.SetParameters(new ReportParameter("ReportParameter1", dateTimePicker1.Value.ToString()));
-            reportViewer1.LocalReport.SetParameters(new ReportParameter("ReportParameterEnd1", dateTimePicker1.Value.ToString()));
+            reportViewer1.LocalReport.SetParameters(new ReportParameter("ReportParameterEnd1", dateTimePicker2.Value.ToString()));
             this.reportViewer1.RefreshReport();
         }
 

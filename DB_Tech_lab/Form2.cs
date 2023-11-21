@@ -54,10 +54,10 @@ namespace DB_Tech_lab
             }
             catch (NpgsqlException ex)
             {
-                // Обработка ошибки подключения
+                
                 MessageBox.Show("Невірний Логін або Пароль");
 
-                // Очищаем поле пароля и предоставляем пользователю возможность ввести его снова
+              
                 textBoxPassword.Clear();
             }
         }

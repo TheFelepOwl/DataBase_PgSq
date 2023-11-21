@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.viewavg25BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aVG_25_Set = new DB_Tech_lab.AVG_25_Set();
             this.stationComboBox = new System.Windows.Forms.ComboBox();
@@ -56,14 +56,14 @@
             // stationComboBox
             // 
             this.stationComboBox.FormattingEnabled = true;
-            this.stationComboBox.Location = new System.Drawing.Point(593, 292);
+            this.stationComboBox.Location = new System.Drawing.Point(658, 303);
             this.stationComboBox.Name = "stationComboBox";
             this.stationComboBox.Size = new System.Drawing.Size(182, 21);
             this.stationComboBox.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(593, 416);
+            this.button1.Location = new System.Drawing.Point(658, 427);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(182, 133);
             this.button1.TabIndex = 2;
@@ -73,14 +73,14 @@
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "SO_2Set";
-            reportDataSource2.Value = this.viewavg25BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "SO_2Set";
+            reportDataSource1.Value = this.viewavg25BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "DB_Tech_lab.Report6.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(1, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(552, 438);
+            this.reportViewer1.Size = new System.Drawing.Size(641, 419);
             this.reportViewer1.TabIndex = 3;
             // 
             // view_avg_25TableAdapter
@@ -89,9 +89,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1, 465);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 425);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(552, 438);
+            this.pictureBox1.Size = new System.Drawing.Size(641, 478);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -101,7 +101,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(588, 240);
+            this.label1.Location = new System.Drawing.Point(653, 251);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 29);
             this.label1.TabIndex = 10;
@@ -111,14 +111,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 925);
+            this.ClientSize = new System.Drawing.Size(867, 925);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.stationComboBox);
             this.Name = "Form7";
-            this.Text = "SO2";
+            this.Text = "Звіт SO2";
             this.Load += new System.EventHandler(this.Form7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.viewavg25BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aVG_25_Set)).EndInit();

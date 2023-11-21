@@ -11,7 +11,7 @@ namespace DB_Tech_lab
     {
         public static NpgsqlConnection GetConnection(string username, string password)
         {
-            string connectionString = $"Host=localhost;Port=5432;Username={username};Password={password};Database=Lab_2_Havryliuk;";
+            string connectionString = $"Host=localhost;Port=5432;Username={username};Password={password};Database=lab_2_temp;";
             NpgsqlConnection connection = new NpgsqlConnection(connectionString);
             connection.Open();
             return connection;

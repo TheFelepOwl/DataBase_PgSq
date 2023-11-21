@@ -125,14 +125,14 @@ namespace DB_Tech_lab
             {
                 process.Start();
 
-                // Получение вывода стандартного потока ошибок
+                
                 string errorOutput = process.StandardError.ReadToEnd();
                 process.WaitForExit();
 
-                // Вывод в консоль C#
+            
                 Console.WriteLine(errorOutput);
 
-                // Проверка кода завершения процесса
+            
                 if (process.ExitCode != 0)
                 {
                     Console.WriteLine($"Error: {process.ExitCode}");

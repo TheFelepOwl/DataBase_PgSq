@@ -19,9 +19,7 @@ namespace DB_Tech_lab
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet1.station_view". При необходимости она может быть перемещена или удалена.
             this.station_viewTableAdapter1.Fill(this.dataSet1.station_view);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myDataSet.station_view". При необходимости она может быть перемещена или удалена.
             this.station_viewTableAdapter.Fill(this.myDataSet.station_view);
 
             this.reportViewer1.RefreshReport();

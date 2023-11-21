@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.viewavg25BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aVG_25_Set = new DB_Tech_lab.AVG_25_Set();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -55,9 +55,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "COSet1";
-            reportDataSource2.Value = this.viewavg25BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "COSet1";
+            reportDataSource1.Value = this.viewavg25BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "DB_Tech_lab.Report7.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 27);
             this.reportViewer1.Name = "reportViewer1";
@@ -120,7 +120,7 @@
             this.Controls.Add(this.stationComboBox);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Form8";
-            this.Text = "CO";
+            this.Text = "Звіт CO";
             this.Load += new System.EventHandler(this.Form8_Load);
             ((System.ComponentModel.ISupportInitialize)(this.viewavg25BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aVG_25_Set)).EndInit();

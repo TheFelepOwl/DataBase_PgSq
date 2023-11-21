@@ -35,7 +35,6 @@
             this.станціїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.категоріїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mQTTServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.кординатиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вимірюванняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оптималніЗначенняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.улюбленнаСтанціяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +80,6 @@
             this.станціїToolStripMenuItem,
             this.категоріїToolStripMenuItem,
             this.mQTTServerToolStripMenuItem,
-            this.кординатиToolStripMenuItem,
             this.вимірюванняToolStripMenuItem,
             this.оптималніЗначенняToolStripMenuItem,
             this.улюбленнаСтанціяToolStripMenuItem,
@@ -109,15 +107,8 @@
             // 
             this.mQTTServerToolStripMenuItem.Name = "mQTTServerToolStripMenuItem";
             this.mQTTServerToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.mQTTServerToolStripMenuItem.Text = "MQTT_Server";
+            this.mQTTServerToolStripMenuItem.Text = "MQTT Server";
             this.mQTTServerToolStripMenuItem.Click += new System.EventHandler(this.mQTTServerToolStripMenuItem_Click);
-            // 
-            // кординатиToolStripMenuItem
-            // 
-            this.кординатиToolStripMenuItem.Name = "кординатиToolStripMenuItem";
-            this.кординатиToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.кординатиToolStripMenuItem.Text = "Кординати";
-            this.кординатиToolStripMenuItem.Click += new System.EventHandler(this.кординатиToolStripMenuItem_Click);
             // 
             // вимірюванняToolStripMenuItem
             // 
@@ -144,7 +135,7 @@
             // 
             this.mQTTMessegeUnitToolStripMenuItem.Name = "mQTTMessegeUnitToolStripMenuItem";
             this.mQTTMessegeUnitToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.mQTTMessegeUnitToolStripMenuItem.Text = "MQTT_Messege_Unit";
+            this.mQTTMessegeUnitToolStripMenuItem.Text = "MQTT Messege Unit";
             this.mQTTMessegeUnitToolStripMenuItem.Click += new System.EventHandler(this.mQTTMessegeUnitToolStripMenuItem_Click);
             // 
             // програмаToolStripMenuItem
@@ -198,7 +189,7 @@
             // 
             this.результатиВимірюваньСтанціїToolStripMenuItem.Name = "результатиВимірюваньСтанціїToolStripMenuItem";
             this.результатиВимірюваньСтанціїToolStripMenuItem.Size = new System.Drawing.Size(409, 26);
-            this.результатиВимірюваньСтанціїToolStripMenuItem.Text = " Результати вимірювань станції";
+            this.результатиВимірюваньСтанціїToolStripMenuItem.Text = "Результати вимірювань станції";
             this.результатиВимірюваньСтанціїToolStripMenuItem.Click += new System.EventHandler(this.результатиВимірюваньСтанціїToolStripMenuItem_Click);
             // 
             // powerBIToolStripMenuItem
@@ -264,7 +255,6 @@
         private System.Windows.Forms.ToolStripMenuItem станціїToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem категоріїToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mQTTServerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem кординатиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вимірюванняToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оптималніЗначенняToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem улюбленнаСтанціяToolStripMenuItem;

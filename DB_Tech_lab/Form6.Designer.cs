@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.viewavg25BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aVG25SetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aVG_25_Set = new DB_Tech_lab.AVG_25_Set();
@@ -63,9 +63,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.viewavg25BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.viewavg25BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "DB_Tech_lab.Report5.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(1, 2);
             this.reportViewer1.Name = "reportViewer1";
@@ -88,7 +88,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(634, 389);
+            this.button1.Location = new System.Drawing.Point(634, 323);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 89);
             this.button1.TabIndex = 2;
@@ -125,14 +125,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 932);
+            this.ClientSize = new System.Drawing.Size(803, 932);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.stationComboBox);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Form6";
-            this.Text = "Avg_PM2.5";
+            this.Text = "Середній PM2.5 ";
             this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.viewavg25BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aVG25SetBindingSource)).EndInit();

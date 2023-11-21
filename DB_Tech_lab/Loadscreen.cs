@@ -32,5 +32,10 @@ namespace DB_Tech_lab
         {
 
         }
+
+        private void Loadscreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

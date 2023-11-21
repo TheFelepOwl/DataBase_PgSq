@@ -82,17 +82,14 @@ namespace DB_Tech_lab
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // Additional logic if needed when the station name text changes
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            // Additional logic if needed when the start time text changes
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            // Additional logic if needed when the end time text changes
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

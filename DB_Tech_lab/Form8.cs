@@ -36,60 +36,71 @@ namespace DB_Tech_lab
             stationComboBox.ValueMember = "name";
             stationComboBox.Text = "Виберіть станцію";
 
-            
 
-            
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            System.Data.DataSet dataSet = new System.Data.DataSet();
+            
+            var loadingScreen = new Loadscreen();
+            loadingScreen.Show();
+            await Task.Delay(100); 
 
-            MessageBox.Show("Зачекайте, будь ласка, поки генерується звіт...", "Завантаження", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-            // Create a NpgsqlDataAdapter with the query
-            NpgsqlDataAdapter adapter = new NpgsqlDataAdapter($"SELECT * FROM View_AVG_25 WHERE Назва_станції = '{stationComboBox.SelectedValue.ToString()}' AND Назва_параметру = 'Carbon monoxide(CO)' ;", connection);
-
-            // Fill the DataSet with the result of the query
-            adapter.Fill(dataSet);
-
-
-            int Excellent = 0;
-            int Fine = 0;
-            int Moderate = 0;
-
-            foreach (DataRow row in dataSet.Tables[0].Rows)
+            try
             {
-                string cleanliness = row["Степіть_чистоти_повітря"].ToString();
+                System.Data.DataSet dataSet = new System.Data.DataSet();
 
+                
 
-                if (cleanliness.Equals("Excellent", StringComparison.OrdinalIgnoreCase))
-                {
-                    Excellent++;
-                }
-                else if (cleanliness.Equals("Fine", StringComparison.OrdinalIgnoreCase))
-                {
-                    Fine++;
-                }
-                else if (cleanliness.Equals("Moderate", StringComparison.OrdinalIgnoreCase))
-                {
-                    Moderate++;
-                }
+                // Create a NpgsqlDataAdapter with the query
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter($"SELECT * FROM View_AVG_25 WHERE Назва_станції = '{stationComboBox.SelectedValue.ToString()}' AND Назва_параметру = 'Carbon monoxide(CO)' ;", connection);
 
+                // Fill the DataSet with the result of the query
+                adapter.Fill(dataSet);
+
+                int Excellent = 0;
+                int Fine = 0;
+                int Moderate = 0;
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    string cleanliness = row["Степіть_чистоти_повітря"].ToString();
+
+                    if (cleanliness.Equals("Excellent", StringComparison.OrdinalIgnoreCase))
+                    {
+                        Excellent++;
+                    }
+                    else if (cleanliness.Equals("Fine", StringComparison.OrdinalIgnoreCase))
+                    {
+                        Fine++;
+                    }
+                    else if (cleanliness.Equals("Moderate", StringComparison.OrdinalIgnoreCase))
+                    {
+                        Moderate++;
+                    }
+
+                    
+
+                    this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Excellent", Excellent.ToString()));
+                    this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Fine", Fine.ToString()));
+                    this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Moderate", Moderate.ToString()));
+                    this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("station", stationComboBox.SelectedValue.ToString()));
+
+                    await Task.Delay(100); 
+
+                    }
                 this.viewavg25BindingSource.DataSource = dataSet.Tables[0];
-
-                this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Excellent", Excellent.ToString()));
-                this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Fine", Fine.ToString()));
-                this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Moderate", Moderate.ToString()));
-                this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("station", stationComboBox.SelectedValue.ToString()));
-
-
                 Python_grafix(Excellent, Fine, Moderate, stationComboBox.SelectedValue.ToString());
                 this.reportViewer1.RefreshReport();
             }
+            finally
+            {
+               
+                loadingScreen.Close();
+            }
         }
+
 
         public void Python_grafix(int Excellent,int Fine, int Moderate, string stationName)
         {
@@ -108,14 +119,14 @@ namespace DB_Tech_lab
             {
                 process.Start();
 
-                // Получение вывода стандартного потока ошибок
+                
                 string errorOutput = process.StandardError.ReadToEnd();
                 process.WaitForExit();
 
-                // Вывод в консоль C#
+               
                 Console.WriteLine(errorOutput);
 
-                // Проверка кода завершения процесса
+                
                 if (process.ExitCode != 0)
                 {
                     Console.WriteLine($"Error: {process.ExitCode}");

@@ -84,6 +84,7 @@
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loadscreen";
+            this.Load += new System.EventHandler(this.Loadscreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

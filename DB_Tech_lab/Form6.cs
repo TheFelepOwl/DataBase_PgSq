@@ -40,7 +40,7 @@ namespace DB_Tech_lab
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // ... (your existing code)
+            
 
             // Create a DataSet to store the result of the query
             System.Data.DataSet dataSet = new System.Data.DataSet();
@@ -51,7 +51,7 @@ namespace DB_Tech_lab
             // Fill the DataSet with the result of the query
             adapter.Fill(dataSet);
 
-            // Count the occurrences of "Степіть_чистоти_повітря" values that are "poor" or "very poor"
+           
             int poorCount = 0;
             int veryPoorCount = 0;
 
@@ -71,14 +71,14 @@ namespace DB_Tech_lab
 
             
 
-            // Set the DataSet as the data source for the binding source
+            
             this.aVG25SetBindingSource.DataSource = dataSet.Tables[0];
 
-            // Set the report parameter
+          
             this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Counter", poorCount.ToString()));
             this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Very_poor", veryPoorCount.ToString()));
             this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("station", stationComboBox.SelectedValue.ToString()));
-            // Refresh the report
+           
             this.reportViewer1.RefreshReport();
 
             Python_grafix(poorCount, veryPoorCount, stationComboBox.SelectedValue.ToString());
@@ -102,21 +102,21 @@ namespace DB_Tech_lab
             {
                 process.Start();
 
-                // Получение вывода стандартного потока ошибок
+                
                 string errorOutput = process.StandardError.ReadToEnd();
                 process.WaitForExit();
 
-                // Вывод в консоль C#
+            
                 Console.WriteLine(errorOutput);
 
-                // Проверка кода завершения процесса
+               
                 if (process.ExitCode != 0)
                 {
                     Console.WriteLine($"Error: {process.ExitCode}");
                 }
             }
 
-            // Отображение сохраненного изображения в PictureBox
+            
             pictureBox1.ImageLocation = "C:\\Users\\TheFelepOwl\\Documents\\nubip\\Tech_DataBase\\DataBase_visualizer\\grafix.png";
         }
 
@@ -137,14 +137,14 @@ namespace DB_Tech_lab
             {
                 process.Start();
 
-                // Получение вывода стандартного потока ошибок
+                
                 string errorOutput = process.StandardError.ReadToEnd();
                 process.WaitForExit();
 
-                // Вывод в консоль C#
+          
                 Console.WriteLine(errorOutput);
 
-                // Проверка кода завершения процесса
+             
                 if (process.ExitCode != 0)
                 {
                     Console.WriteLine($"Error: {process.ExitCode}");

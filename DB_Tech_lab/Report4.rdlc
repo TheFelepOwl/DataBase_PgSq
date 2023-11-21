@@ -114,12 +114,12 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.51424cm</Width>
+                  <Width>4.38736cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>3.29406cm</Height>
+                  <Height>3.9026cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -159,7 +159,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>3.29406cm</Size>
+                    <Size>3.9026cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox29">
                         <CanGrow>true</CanGrow>
@@ -206,7 +206,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>3.51424cm</Size>
+                    <Size>4.38736cm</Size>
                     <CellContents>
                       <Textbox Name="Місто1">
                         <CanGrow>true</CanGrow>
@@ -249,7 +249,7 @@
                         </SortExpression>
                       </SortExpressions>
                       <TablixHeader>
-                        <Size>3.51424cm</Size>
+                        <Size>4.38736cm</Size>
                         <CellContents>
                           <Textbox Name="Назва_параметру1">
                             <CanGrow>true</CanGrow>
@@ -299,10 +299,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>1.92828cm</Top>
+            <Top>0.7112cm</Top>
             <Left>0.41514cm</Left>
-            <Height>6.58812cm</Height>
-            <Width>10.54272cm</Width>
+            <Height>7.8052cm</Height>
+            <Width>13.1621cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
